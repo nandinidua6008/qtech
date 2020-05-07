@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  exam_duration: 1
+  passing_marks: 1
+  subject: one
+  topic: one
+
+two:
+  name: MyString
+  exam_duration: 1
+  passing_marks: 1
+  subject: two
+  topic: two

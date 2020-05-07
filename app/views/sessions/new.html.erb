@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/animate.css">
+    <link rel="stylesheet" href="assets/login-style.css"> 
+  </head>
+<body class="wow fadeIn">
+  <!-- header start --> 
+  <header class="navbar site-header navbar-fixed-top wow fadeIn" id="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="javascript:void(0)" class="navbar-brand site-logo resized-link" id="logo">QuizTech</a>
+      </div>
+      <div class="collapse navbar-collapse" id="siteNavbar">
+        <ul class="navbar-nav navbar-right navlink">
+          <li>
+            <a class="resized-link" href="javascript:void(0)" title="Home">Home</a>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle resized-link" data-toggle="dropdown" href="javascript:void(0)" title="Login">Login
+              <span class="fa fa-angle-down resized-link"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:void(0)" title="User login">User</a></li>
+              <li><a href="javascript:void(0)" title="Admin login">Admin</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="resized-link" href="javascript:void(0)" title="Contact us">Contact Us</a>
+          </li>     
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- header end --> 
+  
+  <!-- outer container start-->
+  <div class="page-content">
+    <div class="container">
+      <!-- form container start -->
+
+      <div class="site-heading">
+        <h1>Welcome</h1>
+        <p>Lorem ipsum dolor consectetur sed do eiusmod sed do eiusmod vitae.</p>
+      </div>
+      <div class="login-form">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="col-left">
+              <!-- <img src="img/login.png" alt="login" width="64" height="64"> -->
+              <%= image_tag('login.png', :alt => "login", :class => 'class name') %>
+              <h2 class="wow tada"  data-wow-duration="1s" data-wow-delay="0.6s">Hi <span>User</span>..!</h2>
+              <p>Lorem ipsum dolor consectetur, sed do eiusmod sed do eiusmod vitae elementum lacus
+              massa sit amet metus...</p>           
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="col-right wow bounceInRight">
+              <form method="get" action="/dashboard">
+                <div class="form-group input-box">
+                  <label class="inp-label"><i class="fa fa-user icon"></i></label>
+                  <input type="text" class="inp-field" name="user[email]" placeholder="Username..">
+                </div>
+                <div class="form-group input-box">
+                   <label class="inp-label"><i class="fa fa-lock icon"></i></label>
+                   <link rel="icon" href="/assets/fa fa-lock icon">
+                   <input type="password" class="inp-field" name="user[password]" placeholder="Password..">
+                </div>
+                <div class="form-group input-box">
+                   <label class="remember-box"><input type="checkbox" name="remember"> Remember me</label>
+                </div>
+                <div class="form-btn">
+                  <button type="submit" class="btn login-btn">Login</button>
+                </div>  
+              </form>
+              <div class="forgot-link">
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#forgot-Modal" title="Forgot password">
+                Forgot password?</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <!-- form container end -->
+      
+      <!--Forgot password Modal start-->
+      <div class="modal fade" id="forgot-Modal" role="dialog">
+        <div class="modal-form wow slideInDown">
+          <div class="modal-content">
+            <div class="modal-form-container">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <div class="modal-form-heading">
+                <img src="img/password.png" alt="forgot password" width="60" height="60">
+                <h3>Forgot Password?</h3>
+                <p>You can reset your password here..</p>
+              </div>
+              <div class="modal-form-content">
+                <form>
+                  <div class="form-group input-box">
+                    <label class="inp-label"><i class="fa fa-envelope icon"></i></label>
+                     <input type="email" class="inp-field" name="email" placeholder="Your Email..">
+                  </div>
+                  <div class="form-btn">
+                    <button type="submit" class="btn login-btn">Send</i></button>
+                  </div>  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Forgot password Modal end-->
+      
+      <!--Reset password Modal start-->
+      <div class="modal fade" id="reset-Modal" role="dialog">
+        <div class="modal-form wow slideInDown">
+          <div class="modal-content">
+            <div class="modal-form-container">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <div class="modal-form-heading">
+                <img src="img/reset.png" alt="reset password" width="50" height="50">
+                <h3>Change Password</h3>
+                <p>You can reset your password here..</p>
+              </div>
+              <div class="modal-form-content">
+                <form>
+                  <div class="form-group input-box">
+                    <label class="inp-label"><i class="fa fa-lock icon"></i></label>
+                     <input type="password" class="inp-field" name="password" placeholder="Current password..">
+                  </div>
+                  <div class="form-group input-box">
+                    <label class="inp-label"><i class="fa fa-lock icon reset-icon"></i></label>
+                     <input type="password" class="inp-field" name="password" placeholder="New password..">
+                  </div>
+                  <div class="form-group input-box">
+                    <label class="inp-label"><i class="fa fa-lock icon reset-icon"></i></label>
+                     <input type="password" class="inp-field" name="password" placeholder="Re-enter password..">
+                  </div>
+                  <div class="form-btn">
+                    <button type="submit" class="btn login-btn">Confirm</i></button>
+                  </div>  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Reset password Modal end-->
+    </div>
+  </div>
+  <!-- outer container end-->
+  
+  <!-- Side option-Bar start-->
+  <div class="option-container">
+    <div class="option-box" onclick="openNav()" id="box-btn">
+      <i class="fa fa-cog sidebar-icon"></i>
+    </div>
+  </div>
+  <div id="sideOptionBar" class="side-optionbar">
+    <a href="javascript:void(0)" class="closebtn side-link" onclick="closeNav()">&times;</a>
+    <ul class="option-list">
+     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#reset-Modal" class="side-link">
+       <i class="fa fa-key side-icon"></i>Reset Password</a></li>
+     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#forgot-Modal" class="side-link">
+       <i class="fa fa-lock side-icon"></i>Forgot Password</a></li>
+     <li> <a href="javascript:void(0)" class="side-link"><i class="fa fa-question side-icon"></i>Any help</a></li>
+     <li> <a href="javascript:void(0)" class="side-link"><i class="fa fa-power-off side-icon"></i>Logout</a></li>
+   </ul>
+  </div>
+  <!-- Side option-Bar end-->
+    <script src="js/index.js"></script> 
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script> 
+</body> 
+</html>
