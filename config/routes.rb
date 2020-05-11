@@ -1,13 +1,32 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  devise_for :users
+  root to: 'users#index'
+
   resource :users
   
-  root to: 'users#index'
+  get 'register' , to: 'users#register'
+
+  post '/create_registration' , to: 'users#create' 
+
+  
+
+  get 'create' , to: 'sessions#create'
+
+  
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  
+  
  
-	get 'register' , to: 'users#register'
-    post '/create_registration' , to: 'users#create' 
-	#get 'dashboard' , to: 'users#dashboard'
+	
+    
+	get 'dashboard' , to: 'users#dashboard'
+	get 'sessions/destroy' , to: 'sessions#destroy'
+
+  get 'sessions/new', to: 'sessions#new'
 	# get 'create' , to: 'sessions#create'
 	get 'contact' , to: 'users#contact'
-	get 'login', to: 'users#login'
+	#get 'login', to: 'users#login'
 end

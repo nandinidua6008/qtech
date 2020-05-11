@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	def new
+  def new
   end
 
   def create
@@ -15,5 +15,10 @@ class SessionsController < ApplicationController
   def destroy
   	session[:user_id] = nil
     redirect_to root_path
-end
+  end
+  private
+  def admins_params
+    params.require(:user).permit(:id, :email, :password)
+  end
+
 end

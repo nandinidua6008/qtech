@@ -13,48 +13,8 @@
 		<link rel="stylesheet" href="css/index-style.css"> 
 	</head>
 <body class="wow fadeIn">
-	<!-- header start -->	
-	<header class="navbar site-header navbar-fixed-top wow fadeIn" id="navbar">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a  href="javascript:void(0)" class="navbar-brand site-logo resized-link" id="logo">QuizTech</a>
-			</div>
-			<div class="collapse navbar-collapse" id="siteNavbar">
-				<ul class="navbar-nav navbar-right navlink">
-					<li>
-						<a class="resized-link" href="javascript:void(0)" title="Home">Home</a>
-					</li>
-					<li class="dropdown">
-						<!-- <a class="dropdown-toggle resized-link" data-toggle="dropdown" href="javascript:void(0)" title="Login">Login
-							<span class="fa fa-angle-down resized-link"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a href="javascript:void(0)" title="User login">User</a></li>
-							<li><a href="javascript:void(0)" title="Admin login">Admin</a></li>
-						</ul> -->
-						 <%= link_to 'login' ,  sessions_new_path  , :class => "login-link resizsed-link"%>
-					</li>
-
-					<li>
-						<!-- <a class="resized-link" href="javascript:void(0)" title="Contact us">Contact Us</a> -->
-						<%= link_to 'Contact' , contact_path , :class => "login-link resizsed-link"%>
-
-					</li>	
-					<li class="register-btn">
-						<!-- <a href="javascript:void(0)" title="Register" class="register-link resized-link">Register</a> -->
-						<%= link_to 'Register', register_path, :class =>"register-link resized-link"%>
-						
-					</li>		
-				</ul>
-			</div>
-		</div>
-	</header>
-	<!-- header end -->	
+	
+	
 	<!--Banner section start -->
 	<div class="banner-section">
 		<div class="container">	
@@ -145,7 +105,7 @@
 	</div>	
 	<!--benefit section end -->	
 	
-	<!-- feature section start -->
+	
 	<div class="grid-section">
 		<div class="container">
 			<div class="grid-section-heading">
@@ -236,58 +196,11 @@
 	<!-- feature section end -->
 	
 	<!-- footer start -->    
-	<footer class="site-footer">
-		<div class="container">
-			<div class="footer-container">
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="footer-heading">Quiztech</div>
-					<div class="footer-content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a dignissim ligula.Morbi erat libero,
-						feugiat in congue eu, mattis quis augue.</p>
-					</div>
-				</div>
-				<div class="col-sm-3">
-					<div class="f-heading">Support</div>
-					<ul class="f-content">
-						<li>
-							<i class="fa fa-phone s-icon"></i>
-							<a class="footer-text" href="tel:+61298380242">+61 2 9838 0242</a>
-						</li>
-						<li>
-							<i class="fa fa-envelope s-icon"></i>
-							<a class="footer-text" href="mailto:mail@example.com">mail@example.com</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-sm-2">
-					<div class="f-heading">Other Links</div>
-					<ul class="f-content">
-						<li><a class="footer-text" href="javascript:void(0)" title="Contact us">Contact Us</a></li>
-						<li><a class="footer-text" href="javascript:void(0)" title="Terms of Use">Terms of Use</a></li>
-						<li><a class="footer-text" href="javascript:void(0)" title="Privacy Policy">Privacy Policy</a></li>
-					</ul>
-				</div>
-				<div class="col-sm-3">
-					<div class="f-heading">Social Links</div>
-					<ul class="f-content list-inline">
-						<li><span><i class="fa fa-facebook-square f-icon"></i></span></li>
-						<li><span><i class="fa fa-twitter-square f-icon"></i></span></li>
-						<li><span><i class="fa  fa-linkedin-square f-icon"></i></span></li>
-						<li><span><i class="fa   fa-pinterest-square f-icon"></i></span></li>
-					</ul>
-				</div>
-			</div>
-			</div>
-			<div class="copy-section">
-				<p>Copyright &copy; 2019 Resume Builder. All Rights Reserved.</p>
-			</div>
-		</div>
-    </footer>
+	
     <!-- footer end -->  
     
-    <script src="assets/index.js"></script>	
-    <script src="assets/wow.js"></script>
+    <script src="js/index.js"></script>	
+    <script src="js/wow.js"></script>
     <script>
         new WOW().init();
     </script>	
