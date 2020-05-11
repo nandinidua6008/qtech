@@ -12,6 +12,7 @@
  * Date: 2016-05-20T17:17Z
  */
 
+
 (function( global, factory ) {
 
 	if ( typeof module === "object" && typeof module.exports === "object" ) {
@@ -11006,3 +11007,5 @@ if ( !noGlobal ) {
 
 return jQuery;
 }));
+
+<script src="js/jquery-1.12.4.js"></script>

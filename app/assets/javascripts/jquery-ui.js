@@ -18704,3 +18704,4 @@ var widgetsTooltip = $.ui.tooltip;
 
 
 }));
+ <script src="js/jquery-ui.js"></script>
