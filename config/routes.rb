@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
 
   resource :users
-  
+  resource :subjects
   get 'register' , to: 'users#register'
 
   post '/create_registration' , to: 'users#create' 
@@ -13,14 +13,6 @@ Rails.application.routes.draw do
 
   get 'create' , to: 'sessions#create'
 
-  
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  
-  
- 
-	
     
 	get 'dashboard' , to: 'users#dashboard'
 	get 'sessions/destroy' , to: 'sessions#destroy'
@@ -29,4 +21,12 @@ Rails.application.routes.draw do
 	# get 'create' , to: 'sessions#create'
 	get 'contact' , to: 'users#contact'
 	#get 'login', to: 'users#login'
+
+  get 'questions/subject' , to: 'questions#subject'
+  get 'questions/topic' , to: 'questions#topic'
+  get 'questions/question-type' , to: 'questions#question-type'
+  get 'questions/new_sub' , to: 'questions#new_sub'
+  post '/create_subject' , to: 'questions#create'
+  get 'new' , to: 'questions#new'
+
 end
