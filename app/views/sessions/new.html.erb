@@ -28,12 +28,14 @@
 							<form method="get" action="/dashboard">
 								<div class="form-group input-box">
 									<label class="inp-label"><i class="fa fa-user icon"></i></label>
-									<input type="text" class="inp-field" name="user[email]" placeholder="Email..">
+									<!-- <input type="text" class="inp-field" name="user[email]" placeholder="Email.."> -->
+									<%= text_field "user", "email", "size" => 20, :class => "inp-field", :placeholder =>"Email.." %>
 								</div>
 								<div class="form-group input-box">
 									 <label class="inp-label"><i class="fa fa-lock icon"></i></label>
 									 <link rel="icon" href="/assets/fa fa-lock icon">
-									 <input type="password" class="inp-field" name="user[password]" placeholder="Password..">
+									 <!-- <input type="password" class="inp-field" name="user[password]" placeholder="Password.."> -->
+									 <%= password_field  "user", "password", "size" => 20, :class => "inp-field", :placeholder =>"Password.." %>
 								</div>
 								<div class="form-group input-box">
 									 <label class="remember-box"><input type="checkbox" name="remember"> Remember me</label>
