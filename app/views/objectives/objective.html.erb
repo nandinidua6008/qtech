@@ -1,25 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Question Bank</title>
+	</head>
 <body class="wow fadeIn">
-		
+	<!-- header start -->	
+	<header class="navbar dash-header" id="navbar">
+		<div class="navbar-btn">
+			<a class="nav-open-nav" id="open-nav" onclick="openSideBar()" title="Click to open"> 
+				<i class="fa fa-bars"></i>
+			</a>
+			<a class="nav-cls-btn" id="close-nav" onclick="closeSideBar()" title="click to close"> 
+				 <i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<div class="brand">	
+			<a  href="javascript:void(0)" class="dash-logo" id="logo" title="Quiztech">QuizTech</a>
+		</div>
+	</header>
+	<!-- header end -->
 	
 	<!-- sidebar start -->
 	<aside class="side-nav wow slideInLeft" id="sidenav">
 		<ul class="categories">
 			<li>
-				<a href="/dashboard" title="Dashboard">
+				<a href="javascript:void(0)" title="Dashboard">
 					<i class="fa fa-dashboard"></i><span>Dashboard</span></a>
 			</li>
 			<li class="drop">
 				<a href="javascript:void(0)" title="Question Bank" class="active-dashlink">
 					<i class="fa  fa-pencil-square"></i><span>Question Bank</span></a>
 				<ul class="side-nav-dropdown">
-					<li><a href="/subjects/subject" title="Subjects">
+					<li><a href="javascript:void(0)" title="Subjects">
 						<i class="fa fa-book sub-icon"></i>Subjects</a></li>
-					<li><a href="/questions/topic" title="Topics">
+					<li><a href="javascript:void(0)" title="Topics">
 						<i class="fa fa-file sub-icon"></i>Topics</a></li>
-					<li><a href="/questions/question-type" title="Question Type" class="sub-active-dashlink">
+					<li><a href="javascript:void(0)" title="Question Type">
 						<i class="fa fa-briefcase sub-icon"></i>Question Type</a></li>
-					<li><a href="javascript:void(0)" title="Objective Question">
+					<li><a href="javascript:void(0)" title="Objective Question" class="sub-active-dashlink">
 						<i class="fa fa-file-text sub-icon"></i>Objective Question</a></li>
 			   </ul>
 			</li>
@@ -69,34 +87,113 @@
 			<div class="page-indicator">
 				<a class="indicate-arrow" href="javascript:void(0)" title="Dashboard"><i class="fa fa-home"></i></a>
 				<span class="indicate-arrow">Question Bank</span>
-				<span>Question Type</span>
+				<span>Objective Question</span>
 			</div>
 			<div class="subject-container">
-				<div class="total-question-section">
-					<div class="total-img">
-						<img src="img/total.png" alt="book" width="100" height="100" class="img-responsive">
+				<div class="button-input-container">
+					<div class="button-section">
+						<button class="btn add-new" href="/objectives/newobjective" data-toggle="modal" data-target="#new_topic-Modal"><i class="fa fa-plus-circle "></i>New</button>
+						<button class="btn action">Delete<i class="fa fa-minus-circle"></i></button>
 					</div>
-					<div class="total-question-content">
-						<p>Total Question Type :</p>
-						<span>2</span>
+					<div class="search">
+						<div>
+							<input type="text" placeholder="   Search " required>
+						 </div>
+					</div>
+				</div>
+				<div class="question-drop-container">
+					<div class="question-drop-col">
+						<div class="drop-col-content">
+							<label for="select-box">Subjects</label>
+							<select class="form-control" id="select-box">
+								<option selected disabled>All Subjects</option>
+								<option><span>C++</span></option>
+							</select> 		
+						</div>
+					</div>
+					<div class="question-drop-col">
+						<div class="drop-col-content">
+							<label for="select-box">Topic</label>
+							<select class="form-control" id="select-box">
+								<option selected disabled>All Topics</option>
+								<option><span>Array</span></option>
+							</select> 		
+						</div>
+					</div>
+					<div class="question-drop-col">
+						<div class="drop-col-content">
+							<label for="select-box">Question Status</label>
+							<select class="form-control" id="select-box">
+								<option selected disabled>Status</option>
+								<option>Active</option>
+								<option>Deactive</option>
+							</select> 		
+						</div>
+					</div>
+				</div>
+				<div class="objective-total-container">
+					<div class="objective-total-col">
+						<div class="objective-col-content">
+							<div class="objective-col-img">
+								<img src="img/total.png" alt="book" width="100" height="100" class="img-responsive">
+							</div>
+							<div class="objective-total-col-content">
+								<p>Total Question :</p>
+								<span>1</span>
+							</div>	
+						</div>
+					</div>
+					<div class="objective-total-col">
+						<div class="objective-col-content">
+							<div class="objective-col-img">
+								<img src="img/active.png" alt="book" width="60" height="60" class="img-responsive">
+							</div>
+							<div class="objective-total-col-content">
+								<p>Active Question :</p>
+								<span>1</span>
+							</div> 		
+						</div>
+					</div>
+					<div class="objective-total-col">
+						<div class="objective-col-content">
+							<div class="objective-col-img">
+								<img src="img/deactive.png" alt="book" width="50" height="50" class="img-responsive">
+							</div>
+							<div class="objective-total-col-content">
+								<p>Deactive Question :</p>
+								<span>0</span>
+							</div>		
+						</div>
 					</div>
 				</div>
 				<div class="subject-table">
-					<table class="table">
+					<table class="table table-responsive">
 						<thead class="t-head">
 							<tr>
-								<th>Question Type Name</th>
-								<th>Description</th>
+								<th><input type="checkbox" name="subject-check"></th>
+								<th>Question</th>
+								<th>Subject Name</th>
+								<th>Topic Name</th>
+								<th>Question Status</th>
+								<th>Difficulty Level</th>
+								<th>Marks</th>
+								<th>Edit</th>
+								<th>View</th>
 							</tr>
 						</thead>
 						<tbody class="t-body">
 							<tr class="t-row">
-								<td><span>Multiple choice question</span></td>
-								<td><span>MCQ</span></td>
-							</tr>
-							<tr class="t-row">
-								<td><span>True/False</span></td>
-								<td><span>True/False</span></td>
+								<td><input type="checkbox" name="subject-check"></td>
+								<td><span>What is an array?</span></td>
+								<td><span>C++</span></td>
+								<td><span>Array</span></td>
+								<td><span>Active</span></td>
+								<td><span>Medium</span></td>
+								<td><span>1</span></td>
+								<td><a href="javascript:void(0)" title="edit question" class="edit-icon">
+								</a></td>
+								<td><a href="javascript:void(0)" title="view question" class="view-icon">
+								</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -105,7 +202,7 @@
 		</div>
 	</main>
 	<!--main content end-->
-	
+			
 	<!--Forgot password Modal start-->
 	<div class="modal fade" id="forgot-Modal" role="dialog">
 		<div class="modal-form wow slideInDown">
@@ -180,3 +277,4 @@
    new WOW().init();
 </script>	
 </body>
+</html>

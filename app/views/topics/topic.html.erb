@@ -141,11 +141,16 @@
 						</thead>
 						<tbody class="t-body">
 							<tr class="t-row">
-								<td><input type="checkbox" name="subject-check"></td>
+								<!-- <td><input type="checkbox" name="subject-check"></td>
 								<td><span>Normalization</span></td>
 								<td><span>DBMS</span></td>
 								<td ><a href="javascript:void(0)" title="edit/update topic" class="edit-icon" data-toggle="modal" data-target="#update_topic-Modal">
-								</a></td>
+								</a></td> -->
+								<% @topic.each do |topic| %>
+								<td><input type="checkbox" name="subject-check">
+								<td><%= topic.name %> </td>
+								<td><%= topic.subject.name %> </td>
+								<%end%>
 							</tr>
 						</tbody>
 					</table>
