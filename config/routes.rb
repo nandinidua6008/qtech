@@ -37,4 +37,9 @@ Rails.application.routes.draw do
   get 'topics/topic', to: 'topics#topic'
   get 'topics/new' , to:  'topics#new'
   patch 'subjects', to: 'subject#update'
+
+  get 'objectives/objective' , to: 'objectives#objective'
+  get 'objectives/newobjective' , to: 'objectives#newobjective'
+
+  get 'managements/selection' , to: 'managements#selection'
 end
