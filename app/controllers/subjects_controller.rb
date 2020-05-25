@@ -19,7 +19,7 @@ end
     end
 
 def update
-  # abort params.inspect
+  
       # @sub = Subject.find_by_id(subject_params[:id]) 
       #   if subject_params[:name].present?
       #      @sub.update_attributes(subject_params)
@@ -29,6 +29,18 @@ def update
       #   else
       #      abort(@subjects.errors.messages.inspect)    
       #   end
+      # abort params.inspect
+      # @subject=Subject.find_by_id(subject_params[:id])
+      # if @subject_params[:name].present?
+      #   @subject.update_attributes(params[:subject])
+      #   redirect_to '/subject'
+      # end
+       @subject = Subject.new(subject_params)
+    if @subject.save
+      flash[:notice] = "Subject created successfully"
+      redirect_to  subjects_subject_path
+    
+    end
     end
 
 def new
@@ -50,4 +62,6 @@ private
 def subject_params
     params.require(:subject).permit(:id,:name)
   end
+
+
 end

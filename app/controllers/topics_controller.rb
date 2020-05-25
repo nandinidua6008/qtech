@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
-	def subject
+	def topic
 @topic = Topic.all
+@subject=Subject.all
 end
  def edit
       @topic =Topic.find_by_id(params[:id]) 
@@ -47,7 +48,7 @@ def destroy
         
     end
 private
-def subject_params
-    params.require(:topic).permit(:id,:name)
+def topic_params
+    params.require(:topic).permit(:id,:name, :subject_id)
   end
 end
