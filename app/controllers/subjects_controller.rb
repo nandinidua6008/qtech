@@ -35,12 +35,12 @@ def update
       #   @subject.update_attributes(params[:subject])
       #   redirect_to '/subject'
       # end
-       @subject = Subject.new(subject_params)
-    if @subject.save
-      flash[:notice] = "Subject created successfully"
-      redirect_to  subjects_subject_path
+    #    @subject = Subject.new(subject_params)
+    # if @subject.save
+    #   flash[:notice] = "Subject created successfully"
+    #   redirect_to  subjects_subject_path
     
-    end
+    # end
     end
 
 def new

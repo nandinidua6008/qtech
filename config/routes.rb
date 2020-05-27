@@ -26,7 +26,7 @@ Rails.application.routes.draw do
  get 'subjects/update',to: 'subjects#update'
   # post '/update_subject' to: 'subjects#update'
   get 'subjects/subject' , to: 'subjects#subject'
-
+delete 'subjects/subject' , to: 'subjects#destroy'
  # get 'questions/topic' , to: 'questions#topic'
   get 'questions/question-type' , to: 'questions#question-type'
 
@@ -34,8 +34,12 @@ Rails.application.routes.draw do
   post '/create_subject' , to: 'subjects#create'
   get 'new' , to: 'questions#new'
 
-  get 'topics/topic', to: 'topics#topic'
-  get 'topics/new' , to:  'topics#new'
+   
+  get 'topics/topic' , to: 'topics#topic'
+  get 'topics/question_type' , to: 'topics#question_type'
+  post '/create_topic' , to:  'topics#create' , as: :create_topic 
+  delete 'topics/topic' , to: 'topics#destroy'
+
   patch 'subjects', to: 'subject#update'
 
   get 'objectives/objective' , to: 'objectives#objective'

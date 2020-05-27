@@ -4,6 +4,14 @@
 		<title>Question Bank</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/dashboard-style.css"> 
+	</head> -->
 <body class="wow fadeIn">
 	<!-- header start -->	
 	<header class="navbar dash-header" id="navbar">
@@ -34,11 +42,11 @@
 				<ul class="side-nav-dropdown">
 					<li><a href="javascript:void(0)" title="Subjects" class="sub-active-dashlink">
 						<i class="fa fa-book sub-icon"></i>Subjects</a></li>
-					<li><a href="/topics/topic" title="Topics">
+					<li><a href="/questions/topic" title="Topics">
 						<i class="fa fa-file sub-icon"></i>Topics</a></li>
-					<li><a href="/questions/question-type" title="Question Type">
+					<li><a href="/questions/question_type" title="Question Type">
 						<i class="fa fa-briefcase sub-icon"></i>Question Type</a></li>
-					<li><a href="/objectives/objective" title="Objective Question">
+					<li><a href="javascript:void(0)" title="Objective Question">
 						<i class="fa fa-file-text sub-icon"></i>Objective Question</a></li>
 			   </ul>
 			</li>
@@ -93,7 +101,7 @@
 			<div class="subject-container">
 				<div class="button-input-container">
 					<div class="button-section">
-						<button class="btn action"><a href= "/subjects/new_sub" title="new_sub"><i class="fa fa-plus-circle "></i>New   </a></button>
+						<a href= "/questions/new_sub" title="new_sub"><i class="fa fa-plus-circle "></i>New   </button>
 						<button class="btn action">Delete<i class="fa fa-minus-circle"></i></button>
 					</div>
 					<div class="search">
@@ -120,7 +128,6 @@
 							<th><input type="checkbox" name="subject-check"></th>
 								<th>Subject Name</th>
 								<th>Edit</th>
-								<th>delete</th>
 							</tr>
 						</thead>
 						<tbody class="t-body">
@@ -128,13 +135,10 @@
 							<tr class="t-row">
 								<td><input type="checkbox" name="subject-check"></td>
 								<td><span><%= em.name%></span></td>
-								<td> <!-- <a href="javascript:void(0)" class="edit-icon" title="edit/update subject" data-toggle="modal" data-target="#update_subject-Modal"> </a> -->
-									<a href= "/subjects/update" class="edit-icon" title=""> </a>
-									
-								</td>
-								<td ><%= link_to "Delete",@sub_path, :method => :delete, :data => {:confirm => "You Sure?"} %></td>
-								
- 							</tr>
+								<td><a href="javascript:void(0)" class="edit-icon" title="edit/update subject" data-toggle="modal" data-target="#update_subject-Modal">
+								</a></td>
+								<!-- <td><%= link_to 'Edit' ,edit_question_path(em.id)%> -->
+ -->							</tr>
 							<%end%>
 						</tbody>
 					</table>
@@ -172,7 +176,7 @@
 			<!--Update subject modal end-->
 			
 			<!--create new subject modal start-->
-			<!-- <div class="modal fade" id="new_subject-Modal" role="dialog">
+			<div class="modal fade" id="new_subject-Modal" role="dialog">
 				<div class="subject-modal wow slideInDown">
 					<div class="modal-content">
 						<div class="subject-modal-container">
@@ -198,7 +202,7 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<!--create new subject modal end-->
 		</div>
 	</main>
